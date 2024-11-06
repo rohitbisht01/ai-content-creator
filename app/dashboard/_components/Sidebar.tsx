@@ -1,6 +1,7 @@
 import { History, Home, Receipt, Settings, Wallet } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 export const sidebarLinks = [
@@ -38,13 +39,15 @@ export default function Sidebar() {
 
 export const LogoComponent = () => {
   return (
-    <div className="flex justify-center my-5">
+    <div className="flex justify-center my-5 cursor-pointer">
       <Image src={"/logo.svg"} alt="Logo" width={50} height={50} />
     </div>
   );
 };
 
 export const NavigationLinks = () => {
+  const pathname = usePathname();
+
   return (
     <div className="my-10 flex-1">
       {sidebarLinks.map((link) => {
@@ -52,7 +55,9 @@ export const NavigationLinks = () => {
           <Link
             href={link.path}
             key={link.label}
-            className="flex gap-2 p-4 my-2 rounded-md cursor-pointer hover:bg-orange-500 hover:text-white mx-2 transition duration-150 ease-in"
+            className={`${
+              pathname === link.path && "bg-orange-500 text-white"
+            } flex gap-2 p-4 my-2 rounded-md cursor-pointer hover:bg-orange-500 hover:text-white mx-2 transition duration-150 ease-in`}
           >
             <link.icon />
             <h2>{link.label}</h2>
