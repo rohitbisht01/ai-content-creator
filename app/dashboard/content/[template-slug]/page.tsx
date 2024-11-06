@@ -17,7 +17,7 @@ export default function TemplateSlug({
 }: TemplateSlugProps) {
   const selectedTemplate = templates.find(
     (item: TemplateProps) => item.slug === templateSlug
-  );
+  ) as TemplateProps;
 
   const generateAIContent = (formData: any) => {};
 
