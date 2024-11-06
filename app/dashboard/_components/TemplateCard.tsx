@@ -18,7 +18,7 @@ export default function TemplateCard({
 }) {
   return (
     <Link href={`/dashboard/content/${template.slug}`}>
-      <Card className="cursor-pointer shadow-md hover:scale-105 transition-all">
+      <Card className="cursor-pointer shadow-md hover:scale-105 transition-all h-[300px]">
         <CardHeader>
           <CardTitle className="flex flex-col gap-4">
             <Image
@@ -31,7 +31,7 @@ export default function TemplateCard({
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="line-clamp-5">{template.description}</p>
+          <p className="line-clamp-4">{template.description}</p>
         </CardContent>
       </Card>
     </Link>

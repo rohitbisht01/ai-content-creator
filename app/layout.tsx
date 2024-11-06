@@ -8,7 +8,7 @@ const recursive = Recursive({
 });
 
 export const metadata: Metadata = {
-  title: "AI Content Creator Application",
+  title: "ContentFlow | AI Content Creator",
   description:
     "AI Content Creator is a powerful web application that helps users generate engaging content for various platforms, including YouTube descriptions, Twitter posts, LinkedIn updates, and Instagram captions. Designed for creators looking to streamline their content creation process, this tool leverages AI to produce high-quality, tailored outputs quickly and efficiently.",
 };

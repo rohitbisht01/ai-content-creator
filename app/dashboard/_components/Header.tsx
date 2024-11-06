@@ -3,7 +3,7 @@
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import { Menu, Search } from "lucide-react";
 import React, { useState } from "react";
-import { LogoComponent } from "./Sidebar";
+import { HeaderLogoComponent, LogoComponent } from "./Sidebar";
 
 interface HeaderProps {
   setIsOpen: (open: boolean) => void;
@@ -15,7 +15,7 @@ export default function Header({ setIsOpen }: HeaderProps) {
   return (
     <div className="flex items-center justify-between border-b shadow-sm h-20">
       <div className="block sm:hidden ml-2">
-        <LogoComponent />
+        <HeaderLogoComponent />
       </div>
       <div className="flex items-center p-2 rounded-md gap-2 border mx-4 sm:min-w-64 md:min-w-96 lg:min-w-128">
         <Search className="text-gray-400" />

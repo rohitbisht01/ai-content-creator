@@ -39,9 +39,35 @@ export default function Sidebar() {
 
 export const LogoComponent = () => {
   return (
-    <div className="flex justify-center my-5 cursor-pointer">
-      <Image src={"/logo.svg"} alt="Logo" width={50} height={50} />
-    </div>
+    <Link
+      href={"/dashboard"}
+      className="flex justify-center my-5 cursor-pointer"
+    >
+      <Image
+        src={"/logo.png"}
+        alt="Logo"
+        height={100}
+        width={200}
+        className=""
+      />
+    </Link>
+  );
+};
+
+export const HeaderLogoComponent = () => {
+  return (
+    <Link
+      href={"/dashboard"}
+      className="flex justify-center my-5 cursor-pointer"
+    >
+      <Image
+        src={"/logoo.png"}
+        alt="Logo"
+        height={50}
+        width={50}
+        className=""
+      />
+    </Link>
   );
 };
 
@@ -49,7 +75,7 @@ export const NavigationLinks = () => {
   const pathname = usePathname();
 
   return (
-    <div className="my-10 flex-1">
+    <div className="my-2 flex-1">
       {sidebarLinks.map((link) => {
         return (
           <Link
