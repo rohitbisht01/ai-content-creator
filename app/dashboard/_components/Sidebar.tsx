@@ -52,7 +52,7 @@ export const NavigationLinks = () => {
           <Link
             href={link.path}
             key={link.label}
-            className="flex gap-2 p-4 my-2 rounded-md cursor-pointer hover:bg-orange-500 hover:text-white mx-4 transition duration-150 ease-in"
+            className="flex gap-2 p-4 my-2 rounded-md cursor-pointer hover:bg-orange-500 hover:text-white mx-2 transition duration-150 ease-in"
           >
             <link.icon />
             <h2>{link.label}</h2>

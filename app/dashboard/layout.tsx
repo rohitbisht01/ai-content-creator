@@ -1,4 +1,6 @@
-import React from "react";
+"use client"
+
+import React, { useState } from "react";
 import Sidebar from "./_components/Sidebar";
 import MobileSidebar from "./_components/MobileSidebar";
 import Header from "./_components/Header";
@@ -8,6 +10,8 @@ export default function DashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="flex">
       <div>
@@ -15,11 +19,11 @@ export default function DashboardLayout({
           <Sidebar />
         </div>
         <div className="sm:block lg:hidden">
-          <MobileSidebar />
+          <MobileSidebar isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
       </div>
       <div className="lg:ml-64 w-full">
-        <Header />
+        <Header setIsOpen={setIsOpen} />
         {children}
       </div>
     </div>
